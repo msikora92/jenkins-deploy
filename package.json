@@ -1,0 +1,19 @@
+{
+  "name": "jenkins-deploy",
+  "version": "1.0.0",
+  "description": "Testing Jenkins CI/CD",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msikora92/jenkins-deploy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msikora92/jenkins-deploy/issues"
+  },
+  "homepage": "https://github.com/msikora92/jenkins-deploy#readme"
+}
