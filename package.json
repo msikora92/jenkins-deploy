@@ -15,5 +15,35 @@
   "bugs": {
     "url": "https://github.com/msikora92/jenkins-deploy/issues"
   },
-  "homepage": "https://github.com/msikora92/jenkins-deploy#readme"
+  "homepage": "https://github.com/msikora92/jenkins-deploy#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-html-reporter": "^0.5.2",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^3.5.0",
+    "gulp-minifier": "^1.2.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.3",
+    "jasmine": "^3.1.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-coverage": "^1.1.2",
+    "karma-html-reporter": "^0.2.7",
+    "karma-jasmine": "^1.1.2",
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-threshold-reporter": "^0.1.15"
+  },
+  "dependencies": {
+    "angular": "^1.7.0",
+    "angular-animate": "^1.7.0",
+    "angular-mocks": "^1.7.0",
+    "angular-sanitize": "^1.7.0",
+    "angular-touch": "^1.7.0",
+    "bootstrap": "^4.1.1",
+    "lodash": "^4.17.10"
+  }
 }
