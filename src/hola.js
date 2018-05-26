@@ -1,3 +1,9 @@
 var carlos = 'pepe';
 
-holis = 'chau';
+function hola() {
+    return true;
+}
+
+if (carlos === 'pepe') {
+    hola();
+}
