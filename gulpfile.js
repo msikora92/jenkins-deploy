@@ -83,8 +83,7 @@ function compileFiles(args) {
         .pipe(gulpif(compilerOpts.fileType === 'html', pug(PUG_CONF)))
         .pipe(gulpif(compilerOpts.concat, concat(compilerOpts.destFile)))
         .pipe(gulpif(compilerOpts.minify, minify(MINIFIER_CONF)))
-        .pipe(gulp.dest(DIST_DIR + compilerOpts.destPath))
-        .pipe(sync.stream());
+        .pipe(gulp.dest(DIST_DIR + compilerOpts.destPath));
 }
 
 gulp.task('copy-css', () => {
