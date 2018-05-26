@@ -4,7 +4,7 @@
   "description": "Testing Jenkins CI/CD",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/ -f ./node_modules/eslint-html-reporter/reporter.js -o test_reports/lint.html",
+    "lint": "./node_modules/.bin/eslint src/",
     "karma": "karma start",
     "test": "npm run lint && npm run karma"
   },
