@@ -1,6 +1,5 @@
 dist/
 docs/
 bower_components/
-node_modules/
 test_reports/
 npm-debug.log
