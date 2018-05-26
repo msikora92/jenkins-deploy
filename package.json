@@ -4,7 +4,9 @@
   "description": "Testing Jenkins CI/CD",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "lint": "./node_modules/.bin/eslint src/ -f ./node_modules/eslint-html-reporter/reporter.js -o test_reports/lint.html",
+    "karma": "karma start",
+    "test": "npm run lint && npm run karma"
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,8 @@
     "karma-jasmine": "^1.1.2",
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-threshold-reporter": "^0.1.15"
+    "karma-threshold-reporter": "^0.1.15",
+    "phantomjs": "^2.1.7"
   },
   "dependencies": {
     "angular": "^1.7.0",
