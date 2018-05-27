@@ -1,4 +1,5 @@
 let gulp = require('gulp');
+let config = require('./config');
 let gulpif = require('gulp-if');
 let pug = require('gulp-pug');
 let less = require('gulp-less');
@@ -6,32 +7,12 @@ let minify = require('gulp-minifier');
 let concat = require('gulp-concat');
 let rename = require('gulp-rename');
 
-const CSS_ASSETS = [
-    'node_modules/bootstrap/dist/css/bootstrap.css',
-];
-
-const JS_ASSETS = [
-    'node_modules/angular/angular.js',
-    'node_modules/angular-sanitize/angular-sanitize.js',
-    'node_modules/angular-animate/angular-animate.js',
-    'node_modules/angular-touch/angular-touch.js',
-    'node_modules/lodash/lodash.js'
-];
-
-const SRC_DIR = 'src';
-const DIST_DIR = 'dist';
-
-const MINIFIER_CONF = {
-    minify: true,
-    minifyJS: true,
-    minifyCSS: true,
-    sourceMap: false
-};
-
-const PUG_CONF = {
-    pretty: '\t',
-    basedir: __dirname + '/' + SRC_DIR
-};
+const CSS_ASSETS = config().cssAssets;
+const JS_ASSETS = config().jsAssets;
+const SRC_DIR = config().directories.src;
+const DIST_DIR = config().directories.dist;
+const MINIFIER_CONF = config().minifier;
+const PUG_CONF = config().pug;
 
 // Check if file is inside "node_modules" folder
 function isNodeModule(path) {
@@ -102,4 +83,12 @@ gulp.task('copy-js', () => {
     });
 });
 
-gulp.task('default', ['copy-css', 'copy-js']);
+gulp.task('generate-html', () => {
+    compileFiles({
+        fileType: 'html',
+        srcPath: '/*.pug',
+        destPath: '/templates/components'
+    });
+});
+
+gulp.task('default', ['copy-css', 'copy-js', 'generate-html']);
