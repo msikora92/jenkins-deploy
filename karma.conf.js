@@ -39,6 +39,37 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['progress','html', 'coverage', 'threshold'],
 
+    // karma coverate reporter config
+    coverageReporter: {
+        dir: 'test_reports',
+        subdir: '/coverage',
+        reporters: [
+            {
+                type: 'html'
+            }
+        ]
+    },
+
+    // HTML2JS config
+    ngHtml2JsPreprocessor: {
+        stripPrefix: 'dist/'
+    },
+
+    // HTML Reporter config
+    htmlReporter: {
+      outputDir: 'test_reports',
+      namedFiles: true,
+      reportName: 'jasmine'
+    },
+
+    // karma threshold reporter config
+    // TODO: add real coverage thresholds
+    thresholdReporter: {
+        statements: 0,
+        branches: 0,
+        functions: 0,
+        lines: 0
+    },
 
     // web server port
     port: 9876,
