@@ -8,6 +8,7 @@ module.exports = function config() {
         jsAssets: getIni('assets').js || [],
         directories: getIni('directories') || {},
         minifier: getIni('minifier') || {},
-        pug: getIni('pug') || {}
+        pug: getIni('pug') || {},
+        hash: getIni('hash') || {}
     };
 };
